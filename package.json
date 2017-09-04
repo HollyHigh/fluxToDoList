@@ -15,6 +15,7 @@
     "express": "^4.15.4",
     "lasso": "^2.11.16",
     "lasso-marko": "^2.3.0",
+    "lasso-sass": "^2.0.0",
     "marko": "^4.4.27"
   }
 }

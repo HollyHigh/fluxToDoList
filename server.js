@@ -6,7 +6,8 @@ var compression = require('compression');
 
 require('lasso').configure({
   "plugins": [
-    "lasso-marko"
+    "lasso-marko",
+    "lasso-sass"
   ],
   outputDir: __dirname + 'static',
 });

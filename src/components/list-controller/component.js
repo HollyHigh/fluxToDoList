@@ -15,5 +15,14 @@ module.exports = {
   },
   inputHandler(event, el) {
     ListActions.changeInput(el.value);
+  },
+  deleteHandler(event, el) {
+    var index = Number.parseInt(el.parentNode.getAttribute("index"));
+    ListActions.deleteItem(index);
+  },
+  toggleDoneHandler(event, el) {
+    var index = Number.parseInt(el.parentNode.getAttribute("index"));
+    ListActions.toggleDone(index);
+    console.log(index);
   }
 }

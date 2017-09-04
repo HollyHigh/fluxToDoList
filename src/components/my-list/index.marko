@@ -1,7 +1,13 @@
+<div class="add">
+  <input type='text' value=input.inputVal on-input('inputHandler')>
+  <button on-click('addHandler')>Add an item</button>
+</div>
 <ul>
-  <for(item in input.items)>
-    <li>${item}</li>
+  <for(item in input.items | status-var=loop)>
+    <li index=loop.getIndex()>
+      <input type="checkbox" checked=item.done on-click('toggleDoneHandler')>
+      <span class=(item.done ? "done" : "undone")>${item.content}</span>
+      <button class="delete" on-click('deleteHandler')>Delete</button>
+    </li>
   </for>
 </ul>
-<input type='text' value=input.inputVal on-input('inputHandler')>
-<button on-click('addHandler')>Add an item</button>
